@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <link rel="icon" type="image/svg+xml" href="/assets/ruby-BqlK8oj4.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joy-Baby</title>
+  <script type="module" crossorigin src="/assets/index-EZMHUpgR.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BUqENsYr.css">
+</head>
+
+<body>
+  <script>
+    if (window.location.port === '443' || window.location.port === '80')
+      document.getElementsByTagName('body')[0].classList.add('prod')
+  </script>
+  <div id="startControls">
+    <button id="startBtn">Debug Mode</button>
+    <button id="startDarkBtn">Play!</button>
+  </div>
+
+  <div id="app" class="hidden">
+    <div class="info-sidebar">
+      <h2>Controls</h2>
+      <ul>
+        <li><strong>Song</strong><span id="controllerSpan">none</span></li>
+      </ul>
+      <h2>Info</h2>
+      <ul>
+        <li><strong>controller: </strong><span id="controllerSpan">none</span></li>
+        <li><strong>key: </strong><span id="keySpan">-</span></li>
+        <li><strong>part: </strong><span id="partSpan">-</span></li>
+
+        <div class="debug">
+          <li><strong>angle: </strong><span id="angleSpan">-</span></li>
+          <li><strong>axis0: </strong><span id="axis0Span">-</span></li>
+          <li><strong>axis1: </strong><span id="axis1Span">-</span></li>
+          <li><strong>magnitude: </strong><span id="magnitudeSpan">-</span></li>
+          <li><strong>colorMagnitude: </strong><span id="colorMagnitudeSpan">-</span></li>
+          <li><strong>bgColor: </strong><span id="bgColorSpan">-</span></li>
+        </div>
+      </ul>
+
+      <div class="debug hidden">
+        <div id="status"></div>
+        <button id="testButton">Test Button</button>
+        <input id="testKey" type="text" value="c"></input>
+      </div>
+    </div>
+
+    <div class="center-content">
+      <details id="instructions">
+        <summary>Instructions</summary>
+        <p>
+          Make sure your sound is on.
+          Move the mouse over the canvas or connect gamepad and use the joysticks.
+          Click or press buttons to change parts.
+        </p>
+      </details>
+
+      <canvas id="canvas" width="600" height="600"></canvas>
+    </div>
+
+    <div class="info-sidebar invisible">
+    </div>
+  </div>
+
+</body>
+
+</html>
