@@ -15,7 +15,7 @@
 
 <body>
   <script>
-    if (window.location.port === '443' || window.location.port === '80')
+    if (window.location.port === '443' || window.location.port === '80' || window.location.port === '')
       document.getElementsByTagName('body')[0].classList.add('prod')
   </script>
   <div id="startControls">
