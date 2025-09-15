@@ -11,8 +11,8 @@
   <link rel="icon" type="image/svg+xml" href="/assets/ruby-BqlK8oj4.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Joy-Baby</title>
-  <script type="module" crossorigin src="/assets/index-EZMHUpgR.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-BUqENsYr.css">
+  <script type="module" crossorigin src="/assets/index-BoaSwfD0.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BWZOXdYZ.css">
 </head>
 
 <body>
@@ -21,7 +21,7 @@
       document.getElementsByTagName('body')[0].classList.add('prod')
   </script>
   <div id="startControls">
-    <button id="startBtn">Debug Mode</button>
+    <button id="startDebugBtn">Debug Mode</button>
     <button id="startDarkBtn">Play!</button>
   </div>
 
@@ -29,7 +29,13 @@
     <div class="info-sidebar">
       <h2>Controls</h2>
       <ul>
-        <li><strong>Song</strong><span id="controllerSpan">none</span></li>
+        <li><strong>Song</strong>
+          <div class="button-label">
+            <span id="prevSongBtn" class="next">&lt;</span>
+            <span id="songSpan">none</span>
+            <span id="nextSongBtn" class="next">&gt;</span>
+          </div>
+        </li>
       </ul>
       <h2>Info</h2>
       <ul>
@@ -43,7 +49,7 @@
           <li><strong>axis1: </strong><span id="axis1Span">-</span></li>
           <li><strong>magnitude: </strong><span id="magnitudeSpan">-</span></li>
           <li><strong>colorMagnitude: </strong><span id="colorMagnitudeSpan">-</span></li>
-          <li><strong>bgColor: </strong><span id="bgColorSpan">-</span></li>
+          <li><strong>color: </strong><span id="bgColorSpan">-</span></li>
         </div>
       </ul>
 
@@ -51,6 +57,10 @@
         <div id="status"></div>
         <button id="testButton">Test Button</button>
         <input id="testKey" type="text" value="c"></input>
+      </div>
+
+      <div class="info-footer">
+        <button id="helpBtn">Help</button>
       </div>
     </div>
 
@@ -66,10 +76,44 @@
 
       <canvas id="canvas" width="600" height="600"></canvas>
     </div>
-
-    <div class="info-sidebar invisible">
-    </div>
   </div>
+
+  <dialog id="infoDialog">
+    <h2>Help Menu</h2>
+
+    <h3>What is this Game?</h3>
+    <p>
+      Joy-Baby is a game that hopes to be the answer to the following burning questions:
+    <ul>
+      <li>How can I help my baby develop their capability to interact with objects?</li>
+      <li>How can I teach my baby they can control object remotely?</li>
+      <li>What game can I show my baby that they think is so cool they start grinning wildly as they play it?</li>
+    </ul>
+    </p>
+
+    <h3>How to Produce Nice Sounds</h3>
+    <ul>
+      <li>Try begining by moving the controller up</li>
+      <li>Those slices through the circle mark the zones of chords in a song</li>
+      <li>Proceed from zone to zone in a clockwise manor at a pace that feels nice to you</li>
+      <li>The Faster you move the joystick, the faster the the music will place</li>
+      <li>As the joystick gets further from the center, the quality of the sound will change</li>
+      <li>Pressing a button on the gamepad will cycle to the next part of the song</li>
+    </ul>
+
+    <h3>Things to Try with your Baby</h3>
+    <ul>
+      <li>Set the baby up securely in a bouncer</li>
+      <li>Don't play for too long; if they seem fussy, then they're ready for a nap</li>
+      <li>Hold the full sized joystick (recommended) or game pad near the baby's hands</li>
+      <li>Introduce the baby slowly, at first maybe only you push the joystick and look at the response from the screen</li>
+      <li>
+        It's ok if they can only push the stick in one direction, try rotating the joystick for them. I might have a chance to add more modes to the game that make the game less instrument-like and easier for it to produce pleasing tones automatically
+      </li>
+    </ul>
+
+    <button id="closeModalBtn">Esc</button>
+  </dialog>
 
 </body>
 
